@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadab Ansari - Portfolio</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .float { animation: float 3s ease-in-out infinite; }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-6 bg-white bg-opacity-30 backdrop-blur-md fixed w-full z-10 shadow-md">
+    <h1 class="text-xl font-bold text-gray-800">Shadab</h1>
+    <ul class="flex gap-6 text-gray-700">
+      <li><a href="#about" class="hover:text-gray-900">About</a></li>
+      <li><a href="#skills" class="hover:text-gray-900">Skills</a></li>
+      <li><a href="#projects" class="hover:text-gray-900">Projects</a></li>
+      <li><a href="#contact" class="hover:text-gray-900">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="flex flex-col justify-center items-center min-h-screen pt-24 text-center">
+    <img src="https://avatars.githubusercontent.com/u/95554085?v=4" alt="Profile" class="rounded-full w-40 h-40 mb-6 float shadow-lg">
+    <h1 class="text-4xl font-bold mb-4">Hi, I’m Shadab 👋</h1>
+    <p class="text-gray-800 text-lg mb-6">Aspiring Full-Stack Developer | Day 1 Tailwind Project</p>
+    <div class="flex gap-6 mb-6 text-2xl">
+      <a href="https://github.com/" target="_blank" class="hover:text-black transition-colors">🐙</a>
+      <a href="https://linkedin.com/" target="_blank" class="hover:text-blue-700 transition-colors">💼</a>
+      <a href="https://instagram.com/" target="_blank" class="hover:text-pink-600 transition-colors">📷</a>
+    </div>
+    <button onclick="alert('Welcome to my portfolio! 🚀')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300">Click Me</button>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="max-w-4xl mx-auto my-20 p-6 bg-white bg-opacity-60 backdrop-blur-md rounded-xl shadow-lg text-center">
+    <h2 class="text-2xl font-bold mb-4">About Me</h2>
+    <p class="text-gray-700">I am an aspiring full-stack developer learning HTML, CSS, JavaScript, React, and MERN stack. This is part of my 199-day coding challenge to build my skills and showcase projects.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="max-w-4xl mx-auto my-20 p-6 text-center">
+    <h2 class="text-2xl font-bold mb-6">Skills</h2>
+    <div class="flex flex-wrap justify-center gap-4">
+      <span class="bg-blue-500 text-white px-4 py-2 rounded-full">HTML</span>
+      <span class="bg-green-500 text-white px-4 py-2 rounded-full">CSS</span>
+      <span class="bg-yellow-500 text-white px-4 py-2 rounded-full">JavaScript</span>
+      <span class="bg-purple-500 text-white px-4 py-2 rounded-full">React</span>
+      <span class="bg-pink-500 text-white px-4 py-2 rounded-full">Node.js</span>
+      <span class="bg-gray-700 text-white px-4 py-2 rounded-full">MongoDB</span>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="max-w-6xl mx-auto my-20 p-6">
+    <h2 class="text-2xl font-bold mb-6 text-center">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white bg-opacity-60 backdrop-blur-md rounded-xl shadow-lg p-6 text-center hover:scale-105 transition-transform">
+        <h3 class="font-bold mb-2">Portfolio Landing Page</h3>
+        <p class="text-gray-700 mb-4">Built with HTML, CSS, and Tailwind.</p>
+        <a href="#" class="text-blue-600 hover:underline">View Project</a>
+      </div>
+      <div class="bg-white bg-opacity-60 backdrop-blur-md rounded-xl shadow-lg p-6 text-center hover:scale-105 transition-transform">
+        <h3 class="font-bold mb-2">Todo App</h3>
+        <p class="text-gray-700 mb-4">Built with JavaScript and Tailwind.</p>
+        <a href="#" class="text-blue-600 hover:underline">View Project</a>
+      </div>
+      <div class="bg-white bg-opacity-60 backdrop-blur-md rounded-xl shadow-lg p-6 text-center hover:scale-105 transition-transform">
+        <h3 class="font-bold mb-2">React Blog</h3>
+        <p class="text-gray-700 mb-4">Built with React and Tailwind.</p>
+        <a href="#" class="text-blue-600 hover:underline">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-4xl mx-auto my-20 p-6 bg-white bg-opacity-60 backdrop-blur-md rounded-xl shadow-lg text-center">
+    <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
+    <p class="text-gray-700 mb-6">Feel free to reach out via email or social media!</p>
+    <a href="mailto:example@email.com" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-all">Email Me</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-white bg-opacity-30 backdrop-blur-md">
+    <p>© 2025 Shadab Ansari | Built with ❤️ using Tailwind CSS</p>
+  </footer>
+
+</body>
+</html>
