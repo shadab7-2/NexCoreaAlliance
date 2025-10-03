@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 2</title>
+  </head>
+  <body>
+    <script>
+      // let n1 = parseInt(prompt("Please Enter a number"));
+      // let n2 = parseInt(prompt("Please Enter another number"));
+      // let n3 = parseInt(prompt("Please Enter another number"));
+
+      // if(n1 > n2 && n1 > n3){
+      //     document.write(n1 + " is greatest");
+      // }
+      // else if(n2 > 1 && n2 > n3){
+      //     document.write(n2 + " is the greatest");
+
+      // }else{
+      //     document.write(n3 +" is the greatest");
+      // }
+      // let m = parseInt(prompt("Enter your marks"));
+
+      // if(m <= 100 && m >= 90){
+      //     document.write("Merit");
+      // }else if(m <90 && m >= 75){
+      //     document.write("Disticntion");
+      // }else if(m <75 && m >= 60){
+      //     document.write("Frist Classs");
+      // }else if(m <60 && m >= 50){
+      //     document.write("Second Class")
+      // }else if( m < 50 && m >=35){
+      //     document.write("Pass class")
+      // }else if(m < 35 && m >=0){
+      //     document.write("Tapak gaya")
+      // }else{
+      //     document.write("Aeda mat bana.................")
+      // }
+
+      // let num = parseInt(prompt("Enter the Number"));
+
+      // if(num % 2 == 0){
+      //     document.write("Even Number");
+
+      // }else{
+      //     document.writeln("Odd Number");
+      // }
+
+      // let num = parseInt(prompt("Enter your Number"));
+
+      // if(num % 5 == 0){
+      //     document.write("Number is divisible by 5");
+      // }else{
+      //     document.write("Number is not divisivle by 5");
+      // }
+
+      // let year = parseInt(prompt("Enter your year:"));
+
+      // if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)){
+      //     document.write("Leap Year");
+      // }else{
+      //     document.write("Not a Leap Year");
+      // }
+
+      // WAP
+      // let num = parseInt(prompt("Enter a number"));
+      // if(num % 3 == 0 && num % 5 == 0){
+      //     document.write("Biryani");
+      // }else if( num % 5 == 0){
+      //     document.write("Burger");
+      // }else if(num % 3 == 0){
+      //     document.write(" Pizza")
+      // }else{
+      //     document.write("None")
+      //1
+
+      // let num = parseInt(prompt("Enter the number"));
+
+      // if(num % 2 == 0 ){
+      //     if(num >= 2 && num <= 5){
+      //         document.write("Not Weird")
+      //     } else if(num >= 6 && num <= 20){
+      //         document.write("Weird")
+      //     }else{
+      //         document.write("Not Weird")
+      //     }
+      // }else{
+      //     document.write("Weird");
+      // }
+
+      //Condination operator
+
+      //   let a = parseInt(prompt("Enter a number"));
+      //   let b = 20;
+      //   let c = 30;
+
+      //   let largest = a > b ? a : b;
+      //   let gratest = a > b ? (a > c ? a : c) : (b > c ? b : c);
+
+      //   document.write(largest +"And" + gratest);
+
+      //Switch cases
+      let choice = parseInt(
+        prompt(
+          "1.Addition\n 2.Subtraction\n 3.Multiplication\n 4.Division\n  Enter your choise"
+        )
+      );
+      let a, b, result;
+
+      switch (choice) {
+        case 1:
+          a = parseInt(prompt("Enter a number"));
+          b = parseInt(prompt("Enter another number"));
+          result = a + b;
+          document.write("Result : " + result);
+          break;
+        case 2:
+          a = parseInt(prompt("Enter a number"));
+          b = parseInt(prompt("Enter another number"));
+          result = a - b;
+          document.write("Result : " + result);
+          break;
+        case 3:
+          a = parseInt(prompt("Enter a number"));
+          b = parseInt(prompt("Enter another number"));
+          result = a * b;
+          document.write("Result : " + result);
+          break;
+        case 4:
+          a = parseInt(prompt("Enter a number"));
+          b = parseInt(prompt("Enter another number"));
+          if(b == 0){
+            document.write("Division by 0 is not allowed")
+          }else{
+              result = a / b;
+              document.write("Result : " + result);
+
+          }
+          break;
+          default:
+            document.write("defalt value")
+      }
+    </script>
+  </body>
+</html>
