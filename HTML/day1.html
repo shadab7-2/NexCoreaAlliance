@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 1 - Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+    }
+    nav h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #555;
+    }
+
+    /* Hero Section */
+    header {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background: #222;
+      color: white;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #444;
+      transform: scale(1.05);
+    }
+
+    /* Social Icons */
+    .socials {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+    }
+    .socials a {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: #222;
+      transition: transform 0.3s, color 0.3s;
+    }
+    .socials a:hover {
+      color: #000;
+      transform: translateY(-5px);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h2>Shadab</h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>Hi, I’m Shadab 👋</h1>
+    <p>Welcome to my Fullstack Dev Journey – Day 1 of 199 Days Challenge 🚀</p>
+    <button onclick="showMessage()">Click Me</button>
+
+    <!-- Social Icons -->
+    <div class="socials">
+      <a href="https://github.com/" target="_blank">🐙</a>
+      <a href="https://linkedin.com/" target="_blank">💼</a>
+      <a href="https://instagram.com/" target="_blank">📷</a>
+    </div>
+  </header>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Shadab Ansari | Built with ❤️ using HTML, CSS & JS</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert("🚀 Congrats Shadab! Day 1 Project Complete!");
+    }
+  </script>
+</body>
+</html>
