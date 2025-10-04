@@ -1,0 +1,119 @@
+<!--
+What is HTML?
+1. HTML = HyperText Markup Language.
+2. It’s the structure of a webpage, like the skeleton of a human body.
+3. HTML tells the browser what content is (heading, paragraph, image, link, etc.) but not how it looks (that’s CSS).
+-->
+<!DOCTYPE html>
+<!--Tells browser this is an HTML5 document.-->
+<html lang="en">
+  <!--Root element of the page.-->
+  <head>
+    <!--Contains metadata, title, links to CSS/JS.
+        //--Metadata = data about your webpage-->
+    <meta charset="UTF-8" />
+    <!--Provide information to the browser or search engines.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Firt Webpage</title>
+    <!-- The title of your webpage shown on the browser tab.
+
+    /*Everything inside head affects how the page works or appears, but not the main visible content.-->
+  </head>
+  <!--Everything visible on the page goes here.-->
+   <body>
+  <h1>Welcome to My Website</h1>
+  <p>This is my frist Paragraph</p>
+
+  <!-- heading -->
+  <h1>Main Title</h1>
+  <h2>Sub Title</h2>
+  <h3>Section Title</h3>
+
+  <!--Paragraph-->
+  <p>This is a paragraph About me</p>
+  <!-- use for paragraph-->
+  <p>I love coding and learning webdevelopement</p>
+
+  <!--link-->
+  <a href="https://www.google.com" target="_blank">Go to Google</a>
+  <a href="https://www.youtube.com/" target="_blank">Go to youtube</a>
+  <br />
+
+  <!--Image-->
+  <img
+    src="https://images.pexels.com/photos/32832335/pexels-photo-32832335.jpeg"
+    alt="profile picture"
+    width="200"
+  />
+  <!--
+  7️⃣ Lists
+       Ordered List (Numbered) → <ol> + <li>
+       Unordered List (Bullets) → <ul> + <li>
+  -->
+  <h3>My Skills</h3>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+  <h3>Steps to learn Javascript</h3>
+  <ol>
+    <li>Learn Basics</li>
+    <li>Practice Examples</li>
+    <li>Build Project</li>
+  </ol>
+
+  <!-- Forms are used to collect user input.-->
+  <form action="submit.html" method="POST">
+    <label for="name">Name : </label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      placeholder="Enter your Name"
+    /><br /><br />
+    <label for="email">Email : </label>
+    <input
+      type="email"
+      name="eamil"
+      id="email"
+      placeholder="Enter your Email"
+    />
+    <br /><br />
+    <input type="submit" value="Submit" />
+  </form>
+  <!--
+     action → page where form data is sent.
+       method → GET or POST (type of request).
+      <input> → type can be text, email, password, submit, etc.
+-->
+
+  <!--
+Semantic HTML---Semantic tags give meaning to content (important for SEO and accessibility).
+
+Examples:
+
+Tag	        Meaning
+<header>	Top section / site header
+<nav>	    Navigation links
+<main>	    Main content
+<section>	Section of page content
+<article>	Independent article/blog post
+<footer>	Footer of page
+-->
+  <header><h1>My Website</h1></header>
+
+  <nav><a href="#home">Home</a></nav>
+  <nav><a href="#about">About</a></nav>
+
+  <main>
+    <section>
+        <h2>About me</h2>
+        <p>I am learning web developement steps by steps</p>
+    </section>
+  </main>
+  <footer>
+    <p>@ 2025 My Website</p>
+  </footer>
+ </body>
+</html>
