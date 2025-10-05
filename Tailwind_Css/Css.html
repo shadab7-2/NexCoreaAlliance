@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Basics</title>
+    <style>
+        
+        
+    </style>
+</head>
+<body>
+    <!-- 
+    1️⃣Selectors _ Selectors tell CSS which HTML elements to style.
+    Types of Selectors:
+    1. Element Selector → selects all elements of a type
+    p {
+    color: blue;
+    font-size: 16px;
+    }
+
+    2. Class Selector → selects elements with a specific class
+    .card {
+    background-color: lightgray;
+    padding: 10px;
+   }
+    
+   3.ID Selector → selects a specific element by ID
+   #header {
+    text-align: center;
+  }
+
+  4. Group Selector → apply same style to multiple elements
+  h1, h2, h3 {
+    font-family: Arial, sans-serif;
+  }
+
+  5. Descendant Selector → select nested elements
+  nav ul li {
+    list-style: none;
+  }
+  Targets <li> inside <ul> inside <nav>.
+
+2️⃣ Specificity
+ When multiple styles apply to the same element, CSS decides which one wins.
+ Priority (High → Low):
+ Inline style → <p style="color:red;"> ✅ highest
+ ID selector → #id
+ Class/attribute/pseudo-class → .class, [type="text"], :hover
+ Element selector → p, h1, div
+
+ Universal selector → * ✅ lowest
+ Example: 
+ p { color: blue; }     /* element selector */
+ .text { color: green; } /* class selector */
+ #special { color: red; } /* ID selector */
+
+ <p id="special" class="text">Hello</p> → color red because ID wins.
+ 3️⃣ Box Model:-
+ Every element is a box: content + padding + border + margin.
+ Content → text or image
+ Padding → space inside the box, around content
+ Border → line around padding
+ Margin → space outside the box, separates from other elements
+   div {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px;
+  }
+ 4️⃣ Margins & Padding
+ Margin: space outside the element
+ Padding: space inside the element, around content
+
+ p {
+    margin: 20px;  /* outer spacing */
+    padding: 10px; /* inner spacing */
+    background-color: lightblue;
+ }
+ 5️⃣ Display
+ Controls how elements are displayed.
+ block → takes full width, starts on a new line
+ div { display: block; }
+
+ inline → takes only necessary width, stays on the same line
+ span { display: inline; }
+
+ inline-block → behaves like inline but you can set width/height
+ button { display: inline-block; width: 100px; }
+
+ none → hides element
+ p { display: none; }
+
+ 6️⃣ Positioning
+ Controls element placement relative to normal flow.
+ static → default, normal flow
+
+ relative → relative to its original position
+ div { position: relative; top: 10px; left: 20px; }
+
+ absolute → relative to nearest positioned ancestor
+ div { position: absolute; top: 50px; left: 50px; }
+
+ fixed → relative to viewport, stays on scroll
+ div { position: fixed; top: 0; right: 0; }
+
+ sticky → behaves like relative until scroll reaches a point, then fixed
+
+ Transitions allow you to change CSS properties smoothly over time.
+ Syntax:
+  selector {
+    transition: property duration timing-function delay;
+  }
+ Example:
+ button {
+  background-color: blue;
+  transition: background-color 0.4s ease;
+ }
+ button:hover {
+  background-color: lightblue;
+ }
+ ✅ This smoothly changes the color over 0.4 seconds.
+
+
+2️⃣ Common Transition Properties
+Property	Description
+transition-property	What to animate (e.g. color, transform)
+transition-duration	How long the animation lasts
+transition-timing-function	How it changes (ease, linear, ease-in, etc.)
+transition-delay	When to start the transition
+
+🗓 Day 12 — CSS Transforms
+🎯 Goal:
+Move, rotate, scale, and skew elements in 2D/3D space.
+
+1️⃣ Common Transform Functions
+Function	Description
+translate(x, y)	Move element
+rotate(deg)	Rotate element
+scale(x, y)	Resize element
+skew(x, y)	Tilt element
+    
+    
+    
+    -->
+    
+</body>
+</html>

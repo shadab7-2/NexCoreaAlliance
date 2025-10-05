@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #menuBtn {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        #menuBtn {
+          display: block;
+          background: none;
+          border: none;
+          font-size: 2rem;
+          color: rgb(206, 9, 9);
+        }
+
+        #navMenu {
+          display: none;
+        }
+
+        #navMenu.active {
+          display: block;
+          background: #333;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="geeting"></h1>
+    <h2 id="title">Shadab Ansari</h2>
+
+    <section>
+      <h2>My Projects</h2>
+      <ul id="project-list"></ul>
+    </section>
+
+    <button id="click-me">click me</button>
+
+    <!--Toogle button-->
+    <header>
+      <h1>Shadab Ansari</h1>
+      <nav id="navMenu">
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="menuBtn">☰</button>
+    </header>
+
+
+    <script src="note.js"></script>
+  </body>
+</html>

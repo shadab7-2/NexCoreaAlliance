@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Notes</title>
+    <style>
+      /*Hire Me*/
+      #hire {
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        padding: 20px;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      #hire button {
+        background: #3498db;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 10px;
+        border: 1px solid gray;
+        transition: transform 0.5s ease;
+        animation: pulse 2s infinite;
+      }
+      #hire button:hover {
+        transform: scale(1.2);
+        animation: none;
+      }
+
+      #box {
+        width: 100px;
+        height: 100px;
+        background: tomato;
+        transition: transform 0.4s ease;
+      }
+
+      #box:hover {
+        transform: translateY(-150px);
+      }
+
+ @keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-50px); }
+ }
+
+ .ball {
+  width: 50px;
+  height: 50px;
+  background: tomato;
+  border-radius: 50%;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.text {
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+@keyframes glow {
+    0%{box-shadow: 0 0 5px #0ff;}
+    50%{box-shadow: 0 0 20px #0ff;}
+    100%{box-shadow: 0 0 5px #0ff;}
+    
+}
+button{
+    background: #222;
+    color:  white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: glow 2s ease-in-out infinite;
+}
+
+
+ </style>
+  </head>
+  <body>
+    <!--
+    Css keyframe Animation --Create looping or timed animations (like moving, fading, bouncing).
+    -->
+    <div id="hire">
+      <button>Hire Me</button>
+    </div>
+
+    <!--Css transform-->
+    <div id="box"></div>
+
+    <!--Fade In-->
+
+    <div class="ball"></div>
+    <h1 class="text">fadeIn</h1>
+
+    <!--Glow button-->
+    <button>Click Me</button>
+  </body>
+</html>
