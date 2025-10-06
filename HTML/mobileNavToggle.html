@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile nav toggle</title>
+    <style>
+      #navMenu {
+        display: flex;
+        gap: 20px;
+      }
+      #menuBtn {
+        display: none;
+      }
+      @media (max-width: 768px) {
+        #navMenu {
+          display: none; /* hide menu by default */
+          position: absolute;
+          top: 60px;
+          right: 0;
+          background-color: #333;
+          width: 200px;
+          text-align: center;
+        }
+        #navMenu ul {
+          flex-direction: column;
+          gap: 20px;
+          list-style: none;
+    
+        }
+        #menuBtn {
+          display: block; /* show button on mobile */
+          background: none;
+          border: none;
+          font-size: 2rem;
+          /* color: #fff; */
+          cursor: pointer;
+        }
+      }
+      #navMenu.active {
+        display: block;
+        background-color: white;
+        border: 1px solid gray;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+      #header {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <h1>Shadab Ansari</h1>
+
+      <!-- Navigation Menu -->
+      <nav id="navMenu">
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Toggle Button -->
+      <button id="menuBtn">☰</button>
+    </header>
+
+    <script>
+      let navMenu = document.getElementById("navMenu");
+      let menuBtn = document.getElementById("menuBtn");
+
+      menuBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+
+        if (navMenu.classList.contains("active")) {
+          menuBtn.textContent = "❌";
+        } else {
+          menuBtn.textContent = "☰"; // hamburger icon
+        }
+      });
+    </script>
+  </body>
+</html>
