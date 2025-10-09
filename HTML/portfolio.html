@@ -36,16 +36,28 @@
     <section id="projects">
       <h2>My Projects</h2>
       <ul id="project-list"></ul>
+      <h3>Lorem ipsum dolor</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti velit quae quod illo, sapiente obcaecati.</p>
     </section>
+
     <!-- Contact -->
     <section id="contact">
       <h2>Contact Me</h2>
-      <p>
-        Email :
-        <a href="mailto:sahdabansari972@gmail.com">sahdabansari972@gmail.com</a>
-      </p>
-      <p>LinkedIn : <a href="#">Your linkedIn Profile</a></p>
-      <p>Github : <a href="#">Your github profile</a></p>
+
+      <form action="" id="contactForm">
+        <label for="name">Name : </label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email : </label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message : </label>
+        <textarea name="message" id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      
+      <p id="formMessage">hii</p>
     </section>
 
     <!-- Footer -->

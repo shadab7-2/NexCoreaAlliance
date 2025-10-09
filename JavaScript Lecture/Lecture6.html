@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>On add Off button</h1>
+    <img src="https://images.pexels.com/photos/577513/pexels-photo-577513.jpeg" alt="bulb off" width="400"><br>
+    <input type="button" value="On" onclick="changeImg()">
+
+    <script>
+        
+        function changeImg(){
+            // alert("ha ji")
+            let img = document.getElementsByTagName("img")[0];
+            let btn = document.getElementsByTagName('input')[0];
+
+            if(btn.value == "On"){
+                img.src = "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg";
+                btn.value = "off"
+            }else{
+                img.src = "https://images.pexels.com/photos/577513/pexels-photo-577513.jpeg";
+                btn.value = "On"
+            }
+        }
+        
+    </script>
+</body>
+</html>

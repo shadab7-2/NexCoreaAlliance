@@ -135,7 +135,8 @@ header nav ul li a:hover {
   }
 }
 #hire button {
-  background: #3498db;
+  background: #064067;
+  font-size: larger;
   color: white;
   cursor: pointer;
   padding: 12px 24px;
@@ -151,22 +152,25 @@ header nav ul li a:hover {
 
 /* Project */
 #projects {
-  padding: 40px 20px;
-  background-color: #fff;
+  padding: 60px 20px;
+  background-color: #f4f4f4;
   text-align: center;
+  color: #333;
 }
 #projects h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
 }
 
 #projects ul {
   list-style: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 0;
+  margin-top: 30px;
 }
 #projects ul li {
   background-color: #3498db;
@@ -174,6 +178,8 @@ header nav ul li a:hover {
   padding: 20px;
   border-radius: 8px;
   width: 200px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transfrom 0.3s ease, box-shadow 0.3s ease;
 }
 #projects ul li:hover {
@@ -181,28 +187,115 @@ header nav ul li a:hover {
   box-shadow: o 10px 20px rgba(0, 0, 0, 0.2);
   background-color: #2980b9;
 }
+#project-list li h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#project-list li p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
 
 /* Contact */
 #contact {
   padding: 80px 20px;
   text-align: center;
-  background-color: #ecf0f1;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #contact h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 20px;
 }
 #contact p {
   font-size: 1.1rem;
   margin: 10px 0;
 }
-#contact a {
-  color: #3498db;
-  text-decoration: none;
+
+#contactForm{
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+  max-width: 500px;
 }
-#contact a:hover {
-  text-decoration: underline;
+#contactForm label{
+  font-weight: 600;
+  text-align: left;
 }
+
+#contactForm input,
+#contactForm textarea{
+  padding: 8px;
+  font-size: 1rem;
+  border: 2px solid gray;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+#contactForm textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+#contactForm button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+#contactForm button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+#formMessage {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  min-height: 24px; /* prevent content jump */
+  transition: color 0.3s, opacity 0.3s;
+}
+/* ===================== Dark Mode for Contact ===================== */
+body.dark-mode #contact {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode #contactForm input,
+body.dark-mode #contactForm textarea {
+  background-color: #2b2b2b;
+  border: 2px solid #555;
+  color: #f0f0f0;
+}
+
+body.dark-mode #contactForm input:focus,
+body.dark-mode #contactForm textarea:focus {
+  border-color: #00aaff;
+  box-shadow: 0 0 8px rgba(0, 170, 255, 0.4);
+}
+
+body.dark-mode #contactForm button {
+  background-color: #00aaff;
+}
+
+body.dark-mode #contactForm button:hover {
+  background-color: #0077cc;
+}
+
 
 /*Footer */
 footer {
@@ -240,5 +333,13 @@ html {
     align-items: center;
     font-size: 1.2rem;
     
+  }
+  #contactForm {
+    padding: 0 10px;
+    gap: 15px;
+  }
+
+  #contact h2 {
+    font-size: 1.8rem;
   }
 }

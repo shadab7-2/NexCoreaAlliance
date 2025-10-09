@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Portfolio Card</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+
+  <!-- Card Container -->
+  <div class="bg-white rounded-2xl shadow-2xl w-80 p-6 text-center hover:scale-105 transition-transform duration-300">
+    <!-- Profile Image -->
+    <img src="https://avatars.githubusercontent.com/u/95554085?v=4" alt="Profile" class="w-24 h-24 rounded-full mx-auto border-4 border-indigo-500 shadow-md">
+
+    <!-- Name and Role -->
+    <h2 class="text-2xl font-bold text-gray-800 mt-4">Shadab Ansari</h2>
+    <p class="text-sm text-gray-500">Full Stack Developer | DevOps Engineer</p>
+
+    <!-- About -->
+    <p class="text-gray-600 mt-3 text-sm">Building scalable web apps and automating deployment pipelines using modern web technologies.</p>
+
+    <!-- Buttons -->
+    <div class="mt-5 flex justify-center gap-3">
+      <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-300">Hire Me</button>
+      <button class="border border-indigo-600 text-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors duration-300">Portfolio</button>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="flex justify-center mt-5 gap-5 text-indigo-600 text-xl">
+      <a href="#" class="hover:text-pink-500"><i class="fa-brands fa-github"></i></a>
+      <a href="#" class="hover:text-pink-500"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#" class="hover:text-pink-500"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+  </div>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

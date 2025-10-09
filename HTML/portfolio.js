@@ -4,6 +4,7 @@ const projects = [
   "Calculator App",
   "To-Do List",
   "Formizo",
+  "Quiz App"
 ];
 const projectList = document.getElementById("project-list");
 
