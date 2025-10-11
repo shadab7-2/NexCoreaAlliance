@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    div, section{
+        text-align: center;
+    }
+    
+    button{
+        padding: 10px 14px;
+        border-radius: 8px;
+        border: 1px solid gray;
+        background-color: rgb(17, 17, 114);
+        color: white;
+    }
+    #para{
+        background-color: aquamarine;
+        
+    }
+    #dis{
+        display: ;
+    }
+
+   </style>
+</head>
+<body>
+    <!-- <div>
+        <h1>heading</h1>
+        <p>this is lorem</p> <br>
+        <button type="button">Reapeat</button>
+    </div> -->
+    <!-- Hide and show -->
+    <section>
+        <h1>Hide and show</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa deserunt nemo inventore quibusdam iure esse illum.</p>
+
+        <button type="button" value="Hide"> Hide </button>
+
+    </section>
+    <script>
+        let para = document.querySelector("p");
+        let button = document.querySelector("button");
+
+        button.onclick = () =>{
+            // para.style.display = 'none';
+            if(para.style.display == "none"){
+                para.style.display = "block"
+                button.textContent = "Hide"
+
+            }else{
+                para.style.display = "none"
+                button.textContent = "Show"
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        // button.onclick = () =>{
+        //     para.innerHTML += "<br><br>" + para.innerHTML;
+        // }
+
+        
+
+    
+    </script>
+</body>
+</html>

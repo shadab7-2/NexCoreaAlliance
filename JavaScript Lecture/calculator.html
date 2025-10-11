@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasta Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .container {
+            background: rgb(255, 255, 255);
+            background: linear-gradient(189deg, rgba(255, 255, 255, 1) 0%, rgba(118, 252, 255, 1) 84%);
+            width: 200px;
+            margin: 0 auto;
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #display {
+            width: 100%;
+            text-align: right;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        input[type='button'] {
+            width: 47px;
+            height: 47px;
+            font-size: 20px;
+            margin: 5px 0px;
+            border-radius: 10px;
+            border: 0px;
+            background-color: yellow;
+        }
+
+        input[value='='] {
+            width: 96px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sasta Calculator</h1>
+    <div class="container">
+        <input type="text" id="display">
+        <br>
+        <input type="button" value="7" onclick="press('7')">
+        <input type="button" value="8" onclick="press('8')">
+        <input type="button" value="9" onclick="press('9')">
+        <input type="button" value="+" onclick="press('+')">
+        <br>
+        <input type="button" value="4" onclick="press('4')">
+        <input type="button" value="5" onclick="press('5')">
+        <input type="button" value="6" onclick="press('6')">
+        <input type="button" value="-" onclick="press('-')">
+        <br>
+        <input type="button" value="1" onclick="press('1')">
+        <input type="button" value="2" onclick="press('2')">
+        <input type="button" value="3" onclick="press('3')">
+        <input type="button" value="*" onclick="press('*')">
+        <br>
+        <input type="button" value="C" onclick="clearOne()">
+        <input type="button" value="0" onclick="press('0')">
+        <input type="button" value="." onclick="press('.')">
+        <input type="button" value="/" onclick="press('/')">
+        <br>
+        <input type="button" value="AC" onclick="allClear()">
+        <input type="button" value="00" onclick="press('00')">
+        <input type="button" value="=" onclick="calc()">
+
+        <script>
+            let display = document.querySelector('#display');
+            function press(value){
+                display.value += value;
+
+            }
+            function clearOne(){
+                display.value = display.value.substr(0,display.value.length - 1)
+            }
+
+            function allClear(){
+                display.value = null;
+            }
+
+            function calc(){
+                display.value = eval(display.value);
+            }
+        </script>
+    </div>
+</body>
+
+</html>
