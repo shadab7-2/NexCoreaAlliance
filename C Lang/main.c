@@ -134,5 +134,13 @@ int main()
 
     return 0;
 }
+// primitive data type
+
+// int  (short(signed , unsigned,), int(signed, unsigned) , long(signed, unsigned))
+
+//char(signed, unsigned) --1 byte
+
+//float (float, double,longdouble )
+
+//void --
      
-             

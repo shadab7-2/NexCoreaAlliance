@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Modal</title>
+    <style>
+      .card {
+  width: 300px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.highlight {
+  background-color: crimson;
+  color: white;
+  font-weight: bold;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal .close {
+  position: absolute;
+  top: 15px; right: 25px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+    </style>
+  </head>
+  <body>
+    <section id="interactive-card">
+  <div class="card">
+    <h2>Shadab Ansari</h2>
+    <p>Click buttons to interact!</p>
+    <button id="colorBtn">Change Color</button>
+    <button id="highlightBtn">Toggle Highlight</button>
+    <button id="openModalBtn">Open Modal</button>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <h3>Welcome!</h3>
+    <p>This modal demonstrates dynamic open/close functionality.</p>
+  </div>
+</div>
+
+
+    <script>
+     // Elements
+const colorBtn = document.getElementById("colorBtn");
+const highlightBtn = document.getElementById("highlightBtn");
+const card = document.querySelector(".card");
+
+const openModalBtn = document.getElementById("openModalBtn");
+const modal = document.getElementById("modal");
+const closeModal = document.getElementById("closeModal");
+
+// 1️⃣ Change style dynamically
+colorBtn.addEventListener("click", () => {
+  card.style.backgroundColor = "#f0f8ff";
+  card.style.borderColor = "#007bff";
+  card.style.color = "#007bff";
+});
+
+// 2️⃣ Toggle highlight class
+highlightBtn.addEventListener("click", () => {
+  card.classList.toggle("highlight");
+});
+
+// 3️⃣ Modal open/close
+openModalBtn.addEventListener("click", () => {
+  modal.classList.add("active");
+});
+
+closeModal.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
+// Close modal if click outside content
+window.addEventListener("click", (e) => {
+  if (e.target === modal) modal.classList.remove("active");
+});
+
+    </script>
+  </body>
+</html>

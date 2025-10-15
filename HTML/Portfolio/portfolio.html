@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <!--Header / Navbar -->
+    <header>
+      <h1>Shadab Ansari</h1>
+      <nav>
+        <ul id="navMenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#project-section">Projects</a></li>
+          <li><a href="#skils">Skills</a></li>
+          <li><a href="#servics">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="menuToggle">☰</button>
+      <button id="themeToggle">🌙</button>
+    </header>
+    <!-- Home -->
+
+    <section class="home" id="home">
+      <h1>This is our home page</h1>
+    </section>
+    <!--Hero / Introduction -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am shadab Ansari learning web developement</p>
+    </section>
+
+    <!--Hire Me button-->
+    <div id="hire">
+      <button>Download Resume</button>
+      <button>Hire Me</button>
+    </div>
+
+    <!--Projects -->
+    <section id="project-section">
+      <h2>Projects</h2>
+      <div id="projects-container">
+        <ul id="projeccts"></ul>
+      </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills">
+      <h1>Skills</h1>
+      <h3>This the list of skills i have</h3>
+      <div>
+        <div id="fronted">
+          <h2>This is fronted skills</h2>
+          <ul>
+            <li>Html</li>
+            <li>css</li>
+            <li>javascript</li>
+            <li>React.js</li>
+          </ul>
+        </div>
+        <div id="backend">
+          <h2>This is the backend skills</h2>
+          <ul>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>MangoDB</li>
+            <li>DSA</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servics -->
+    <section id="servics">
+      <h1>The services provide my me</h1>
+      <section id="services-container">
+        <h2 class="services-title">Services</h2>
+        <div class="services">
+          <div class="services-card">
+            <h3>Web Design</h3>
+            <p>
+              I create visually stunning and user-friendly designs that will
+              captivate your audiences and enhance user experience.
+            </p>
+          </div>
+
+          <div class="services-card">
+            <h3>Web Development</h3>
+            <p>
+              I take designs and craft them into modern and responsive
+              websites/web applications. I focus on performance and
+              accessibility to ensure for a smooth and suitable experience for
+              everyone
+            </p>
+          </div>
+
+          <div class="services-card">
+            <h3>Web Accessiblity Audit</h3>
+            <p>
+              I assess your existing website to ensure it adheres to the Web
+              Content Accessiblity Guideline (WCAG) standards, making it
+              inclusive and usable for all users
+            </p>
+          </div>
+
+          <div class="services-card">
+            <h3>Maintenance and Support</h3>
+            <p>
+              I offer a maintenance and support service after project has been
+              finalised for any bug fixes, maintenance and support for future
+              add ons.
+            </p>
+          </div>
+
+          <div class="services-card">
+            <h3>Content Management System (CMS)</h3>
+            <p>
+              Integrate CMS platforms like Wordpress or Drupal to allow clients
+              to manage their content effortlessly
+            </p>
+          </div>
+
+          <div class="services-card">
+            <h3>Mobile App Development</h3>
+            <p>
+              Build responsive, cross-platform mobile apps that deliver an
+              exceptional user experience
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+
+      <form action="" id="contactForm">
+        <label for="name">Name : </label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email : </label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message : </label>
+        <textarea name="message" id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+
+      <p id="formMessage">hii</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Shadab Ansari. all Right Reserved</p>
+    </footer>
+    <script src="portfolio.js"></script>
+  </body>
+</html>
