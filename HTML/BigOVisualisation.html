@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Big O Complexity Visualizer</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #container {
+      background-color: white;
+      max-width: 90vw;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    input, button {
+      padding: 6px 12px;
+      margin: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    canvas {
+      max-width: 100%;
+      height: 400px !important;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <h2>Big O Complexity Visualizer</h2>
+  <div>
+    <label>Array Sizes (comma-separated):</label>
+    <input type="text" id="arraySizes" value="10,50,100,200,500,1000,2000,5000">
+    <button id="updateBtn">Update Chart</button>
+  </div>
+  <canvas id="bigOChart"></canvas>
+</div>
+
+<script>
+  const complexities = ["O(1)", "O(n)", "O(n^2)", "O(log n)", "O(n log n)"];
+  let chart;
+
+  function simulateTime(n, complexity) {
+    switch(complexity) {
+      case "O(1)": return 1;
+      case "O(n)": return n;
+      case "O(n^2)": return n * n;
+      case "O(log n)": return Math.log2(n);
+      case "O(n log n)": return n * Math.log2(n);
+    }
+  }
+
+  function createChart(sizes) {
+    const datasets = complexities.map((c, idx) => ({
+      label: c,
+      data: sizes.map(n => simulateTime(n, c)),
+      fill: false,
+      borderColor: ["#1f77b4","#2ca02c","#d62728","#ff7f0e","#9467bd"][idx],
+      borderWidth: 2,
+      tension: 0.2
+    }));
+
+    const ctx = document.getElementById('bigOChart').getContext('2d');
+    if(chart) chart.destroy(); // remove previous chart
+    chart = new Chart(ctx, {
+      type: 'line',
+      data: { labels: sizes, datasets },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'top' },
+          title: { display: true, text: 'Big O Complexity Visualization' },
+          tooltip: { mode: 'index', intersect: false }
+        },
+        interaction: { mode: 'nearest', axis: 'x', intersect: false },
+        scales: {
+          x: { title: { display: true, text: 'Array Size (n)' } },
+          y: { title: { display: true, text: 'Relative Runtime' }, beginAtZero: true }
+        }
+      }
+    });
+  }
+
+  const initialSizes = document.getElementById('arraySizes').value.split(',').map(Number);
+  createChart(initialSizes);
+
+  document.getElementById('updateBtn').addEventListener('click', () => {
+    const sizes = document.getElementById('arraySizes').value.split(',').map(Number);
+    createChart(sizes);
+  });
+</script>
+
+</body>
+</html>
