@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      try {
+         let a = 10;
+        document.write(a)
+      } catch(error) {
+        document.write(error.message)
+      }finally{
+        document.write(", I will always exicutes <br>")
+      }
+
+      try {
+        document.write("Genrating own error...");
+        throw new Error("Mai iske aage kaam nhi karega ..")
+        document.write("Further code ")
+      } catch (error) {
+        document.write("error.message ")
+      }
+      finally{
+        document.write("I will always execute ")
+      }
+      
+      
+      
+      
+      //Promises
+      let promis = new Promise((reject, resolve)=>{
+        setTimeout(() => {
+          resolve("Promises Resolved");
+        }, 2000);
+      })
+
+      promis.then((message)=>{
+        document.write(message);
+      }).catch((error)=>{
+        document.write(error);
+      })
+
+      // Ajax
+      let xhr = new XMLHttpRequest();
+      xhr.open("GET", "person.json",true);
+      xhr.onload = function(){
+         let data = JSON.parse(this.responseText);
+         document.write(data.friends[0]);
+      }
+      xhr.send();
+
+
+      //Fetch
+      fetch("person.json")
+      .then(response => response.json())
+      .then(data => console.log(data.name))
+      .catch(error=> console.log(error))
+      
+
+      //Async / awailts
+    </script>
+  </body>
+</html>

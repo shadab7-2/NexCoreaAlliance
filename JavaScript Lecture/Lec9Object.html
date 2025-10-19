@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casses And Objects </title>
+</head>
+<body>
+    <script>
+        class Nexcore{
+            constructor(name, course){
+                this.name = name;
+                this.course = course;
+
+            }
+            printDetails(){
+                document.write(this.name + " enrolled in " + this.course + " course"+ "<br>")
+            }
+           printSalary(){
+            let interval = setInterval(()=>{
+                document.write("The Salary of the emp is 10000  <br> " );
+
+            }, 1000)
+           }
+        }
+
+        let nexcore = new Nexcore("Shadab", "MERN")
+        nexcore.printDetails()
+        nexcore.printSalary()
+
+        setInterval(()=>{
+            clearInterval(interval)
+        },10000)
+
+        clearInterval(interval)
+    </script>
+</body>
+</html>
