@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <form action="">
+        First Num : <input type="text" id="num1"/><br/>
+        Seconds Num : <input type="text" id="num2"/><br/>
+        Results : <input type="text" id="results"/>
+
+    </form>
+
+    <script>
+        let num1 = document.querySelector("#num1");
+        let num2 = document.querySelector("#num2");
+        let results = document.querySelector("#results")
+
+        num1.onkeyup = ()=>{
+            results.value = parseInt(num1.value) + parseInt(num2.value);
+        }
+        num2.onkeyup = ()=>{
+            results.value = parseInt(num1.value) + parseInt(num2.value);
+        }
+
+        num1.onmouseover = ()=>{
+            num1.style.backgroundColor = "red";
+        }
+        num1.onmouseout = ()=>{
+            num1.style.backgroundColor = "white";
+        }
+        num2.onclick = ()=>{
+         num2.style.backgroundColor  = "black";
+        }
+    </script>
+</body>
+</html>
