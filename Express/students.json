@@ -1,0 +1,19 @@
+{
+  "students": [
+    {
+      "id": 2,
+      "name": "Sneha Patel",
+      "email": "sneha.patel@example.com",
+      "age": 15,
+      "grade": "9th"
+    },
+    {
+      "id": 3,
+      "name": "Rohan Verma",
+      "email": "rohan.verma@example.com",
+      "age": 17,
+      "grade": "11th"
+    }
+  ]
+}
+    
