@@ -1,0 +1,32 @@
+//Error Handling Middlewar--has 4 parameters.
+
+const express = require('express');
+const app = express();
+
+//Basic Routes
+app.get('/', (req, res) =>{
+    res.send("Wellcome to the shadab Express Page.");
+});
+//Routes that triggers an error intentionally
+app.get("/error", (req, res, next ) =>{
+ try{
+    notDefinedFunction();//simulate an error
+ }catch{
+    next(error);// pass error to next middleware
+ }
+});
+
+//Error handling middleware
+app.use((err, req, res, next) =>{
+    console.error("X Error caougth :" , err.message);
+    res.status(500).json({
+        success: false,
+        message: "Somethings wents wrong!",
+        error: err.message,
+    });
+});
+
+//start server
+app.listen(3000, () =>{
+    console.log("Server running on http://localhost:3000");
+});
