@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= user.name %>'s Profile</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Hello, <%= user.name %> 👋</h1>
+    <p>Age: <%= user.age %></p>
+    <p>Favorite Programming Language: <%= user.favoriteLanguage %></p>
+
+    <% if (user.favoriteLanguage === 'JavaScript') { %>
+      <p class="highlight">You’re a MERN stack developer in the making! 🚀</p>
+    <% } else { %>
+      <p>Keep learning your favorite language!</p>
+    <% } %>
+  </div>
+</body>
+</html>
