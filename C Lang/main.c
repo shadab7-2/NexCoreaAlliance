@@ -144,3 +144,33 @@ int main()
 
 //void --
      
+#include <stdio.h>
+
+int main()
+{
+    // int arr[5];
+    // printf("Enter 5 elements ");
+    // for(int i = 0; i < 5; i++){
+    //     scanf("%d", &arr[i]);
+    // }
+    // printf("Reverse Array \n");
+    // for(int i = 4;  i >= 0; i--){
+    //     printf("%d \n", arr[i]);
+    //     // printf("%d",arr[0]);
+    // }
+    
+    
+    
+    // int arr[6] = {1,4,7,8,10,11};
+    // int even = 0, odd = 0;
+    
+    // for(int i = 0; i < 6; i++){
+    //     if(arr[i]%2 == 0){
+    //         even++;
+    //     }else{
+    //         odd++;
+    //     }
+    // }
+    // printf("Even count : %d\n Odd count : %d", even, odd);
+    // return 0;
+}

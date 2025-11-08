@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+
+<section class="about">
+  <h1>About Me</h1>
+  <p>I am a full-stack developer passionate about building interactive web apps.</p>
+  <h3>Skills:</h3>
+  <ul>
+    <% skills.forEach(skill => { %>
+      <li><%= skill %></li>
+    <% }) %>
+  </ul>
+</section>
+
+<%- include('partials/footer') %>
