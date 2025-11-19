@@ -120,6 +120,7 @@
       <img src="" alt="" />
       <p class="description"></p>
     </div>
+
     <script>
       // ✅ Project Data
       const galleryData = [
@@ -174,14 +175,15 @@
         for (const item of items) {
           const card = document.createElement("div");
           card.classList.add("gallery-card");
-          card.dataset.category = item.category;
-          card.dataset.description = item.description;
-
+           card.dataset.category = item.category;
+           card.dataset.description = item.description;
+           
           // Add innerHTML inside card
           card.innerHTML = `
-      <img src="${item.image}" alt="${item.title}">
-      <h3>${item.title}</h3>
-    `;
+          <img src="${item.image}" alt="${item.title}">
+          <h3>${item.title}</h3>
+          <p> ${item.description}</p>
+          `;
 
           galleryContainer.appendChild(card);
         }
