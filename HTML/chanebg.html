@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Change</title>
+    <style></style>
+  </head> 
+  <body>
+    <h1 id="heading">Change Background</h1>
+    <div>
+      <button id="white">white</button> <button id="black">black</button>
+    </div>
+    <script>
+      document.querySelector("#white").onclick = () => {
+        document.body.style.color = "white";
+        document.body.style.background = "black";
+      };
+
+      document.querySelector("#black").onclick = () => {
+        document.body.style.color = "black";
+        document.body.style.background = "white";
+      };
+    </script>
+  </body>
+</html>
