@@ -1,5 +1,5 @@
 {
-  "name": "exp_mongo",
+  "name": "crud_app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,10 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^6.0.0",
     "ejs": "^3.1.10",
-    "express-session": "^1.18.2",
-    "mongoosh": "^0.0.7",
-    "nodemon": "^3.1.11"
+    "express": "^5.1.0",
+    "mongoose": "^8.20.0"
   }
 }
