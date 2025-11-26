@@ -35,7 +35,7 @@ exports.getStudents = async (req, res) => {
     res.status(500).json({ success: false, message: error.message });
   }
 };
-
+  
 // 📌 Get single student by ID
 exports.getStudentById = async (req, res) => {
   try {
