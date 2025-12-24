@@ -1,0 +1,171 @@
+1. React Fundamentals
+What is React
+Why React exists
+SPA vs MPA
+Virtual DOM
+How React works internally
+React philosophy
+Declarative vs imperative UI
+
+2. JSX
+JSX syntax
+JSX rules
+JSX expressions
+JSX vs HTML
+Fragments
+Conditional JSX
+JSX best practices
+
+3. Rendering
+Rendering elements
+ReactDOM.createRoot
+Re-rendering
+StrictMode
+Hydration (intro)
+
+4. Components
+Functional components
+Component composition
+Reusable components
+Presentational vs container components
+Controlled vs uncontrolled components 
+
+5. Props
+Props basics
+One-way data flow
+Default props
+Props drilling
+Children props 
+
+6. State Management (Local)
+State concept
+useState
+State immutability
+State batching
+Derived state 
+
+7. Events & Handling
+Event handling
+Synthetic events
+Passing arguments to handlers 
+
+8. Conditional Rendering
+if/else rendering
+Ternary operator
+Logical AND rendering 
+
+9. Lists & Keys
+Rendering lists
+Keys
+Why keys are important 
+
+10. Forms
+
+Controlled components
+Uncontrolled components
+Handling multiple inputs
+Form validation
+Custom form logic 
+
+11. Hooks (CORE)
+Rules of Hooks
+useEffect
+Dependency array
+Cleanup function
+useContext
+useRef
+useReducer
+useMemo
+useCallback
+Custom Hooks 
+
+12. Component Communication
+Parent → Child
+Child → Parent
+Sibling communication
+Lifting state up 
+
+13. Routing
+React Router
+SPA routing
+Nested routes
+Dynamic routes
+Route params
+Query params
+Protected routes (frontend) 
+
+14. Data Fetching
+Fetch API
+Axios
+Loading states
+Error handling
+Retry logic
+Pagination (frontend) 
+
+15. Global State
+Context API
+Context performance issues
+Context vs Redux (concept)
+
+16. Styling in React
+CSS files
+Inline styles
+CSS Modules
+Styled-components
+Tailwind CSS
+Responsive design 
+
+17. Performance Optimization
+Re-render behavior
+Memoization
+React.memo
+useMemo (advanced)
+useCallback (advanced)
+Avoiding unnecessary re-renders 
+
+18. Code Splitting & Loading
+Lazy loading
+React.lazy
+Suspense 
+
+19. Error Handling
+Error boundaries
+Fallback UI patterns 
+
+20. Accessibility (a11y)
+Semantic HTML
+ARIA attributes
+Keyboard navigation
+Focus management 
+
+21. Environment & Build
+Environment variables
+Development vs production
+Vite
+CRA
+Build optimization 
+
+22. Testing
+Testing basics
+Jest
+React Testing Library
+Component testing 
+
+23. Architecture & Best Practices
+Folder structure
+Separation of concerns
+Clean code
+Naming conventions
+Reusability patterns 
+
+24. Security (Frontend)
+XSS basics
+Token handling
+Safe rendering 
+
+25. Advanced React
+Concurrent rendering (intro)
+React Fiber (concept)
+Reconciliation
+Batching updates
+Strict mode behavior
