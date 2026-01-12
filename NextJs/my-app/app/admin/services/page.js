@@ -3,7 +3,7 @@ import React from 'react'
 function AdminPage() {
   return (
     <div>
-      <h1>Ad</h1>
+      <h1>Adminn services</h1>
     </div>
   )
 }

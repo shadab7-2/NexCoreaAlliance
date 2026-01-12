@@ -6,7 +6,7 @@ export default function BlogList() {
       {/* Page Header */}
       <div className="max-w-4xl mx-auto text-center mb-10">
         <h1 className="text-4xl font-bold text-gray-800">
-          Blog List
+   Blog List
         </h1>
         <p className="mt-3 text-gray-600">
           Read our latest blogs and tutorials

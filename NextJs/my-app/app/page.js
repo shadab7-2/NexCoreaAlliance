@@ -1,65 +1,91 @@
-import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export const metadata = {
+  title: "Main Page | Mock Website",
+  description:
+    "A modern mock website built with Next.js App Router and Tailwind CSS.",
+};
+
+export default function MainPage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
+    <main className="min-h-screen bg-gray-50">
+      {/* ===== Hero Section ===== */}
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-24">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            Build Fast & Modern Web Applications
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+          <p className="mt-6 text-lg text-blue-100 max-w-2xl mx-auto">
+            A mock website created using Next.js App Router, Tailwind CSS,
+            and modern best practices.
+          </p>
+
+          <div className="mt-8 flex justify-center gap-4">
+            <Link
+              href="/services"
+              className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              Explore Services
+            </Link>
+            <Link
+              href="/contact"
+              className="px-6 py-3 border border-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition"
             >
-              Learning
-            </a>{" "}
-            center.
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Features Section ===== */}
+      <section className="max-w-6xl mx-auto px-6 py-20 grid gap-10 md:grid-cols-3">
+        <div className="bg-white p-8 rounded-xl shadow hover:shadow-lg transition">
+          <h2 className="text-xl font-semibold text-gray-800">
+            High Performance
+          </h2>
+          <p className="mt-3 text-gray-600">
+            Optimized rendering using Server Components and modern caching
+            strategies.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="bg-white p-8 rounded-xl shadow hover:shadow-lg transition">
+          <h2 className="text-xl font-semibold text-gray-800">
+            SEO Optimized
+          </h2>
+          <p className="mt-3 text-gray-600">
+            Built-in metadata and server rendering for better search engine
+            visibility.
+          </p>
         </div>
-      </main>
-    </div>
+
+        <div className="bg-white p-8 rounded-xl shadow hover:shadow-lg transition">
+          <h2 className="text-xl font-semibold text-gray-800">
+            Scalable Structure
+          </h2>
+          <p className="mt-3 text-gray-600">
+            Clean App Router architecture designed for real-world projects.
+          </p>
+        </div>
+      </section>
+
+      {/* ===== CTA Section ===== */}
+      <section className="bg-white py-20 text-center">
+        <h3 className="text-3xl font-bold text-gray-800">
+          Start Your Next Project With Us
+        </h3>
+        <p className="mt-4 text-gray-600 max-w-xl mx-auto">
+          Learn how modern frameworks like Next.js help build fast,
+          scalable, and maintainable web applications.
+        </p>
+
+        <Link
+          href="/about"
+          className="inline-block mt-6 px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+        >
+          Learn More About Us
+        </Link>
+      </section>
+    </main>
   );
 }
